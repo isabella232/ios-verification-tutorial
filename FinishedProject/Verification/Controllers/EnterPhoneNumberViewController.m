@@ -48,7 +48,10 @@
  }
  */
 
-- (IBAction)requestCode:(id)sender {
+
+
+- (IBAction)requestCode:(id)sender
+{
     //some simple validation
     status.text = @"";
     if ([phoneNumber.text isEqualToString:@""])
@@ -60,13 +63,24 @@
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:spinner attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:spinner attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
     [spinner startAnimating];
-    //replace this below with verification code
-    [self performSegueWithIdentifier:@"verifyCodeSeg" sender:nil];
+    //start the verification process with the phonenumber in the field
+    _verification = [SINVerification SMSVerificationWithApplicationKey:@"5ed9928a-36c4-4d3b-a012-a4cc1d05cb79" phoneNumber:phoneNumber.text];
+    //set up a initiate the process
+    [_verification initiateWithCompletionHandler:^(BOOL success, NSError *error) {
+        [spinner stopAnimating];
+        if (success) {
+        
+            [self performSegueWithIdentifier:@"verifyCodeSeg" sender:nil];
+        }
+        else
+        {
+            status.text = [error description];
+        }
+    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     VerifyCodeViewController* vc = [segue destinationViewController];
     vc.verification = _verification;
 }
-
 @end

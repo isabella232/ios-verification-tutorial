@@ -17,17 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+15612600684" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="38R-89-CPp">
-                                <rect key="frame" x="16" y="72" width="568" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQz-YF-Bba">
-                                <rect key="frame" x="16" y="187" width="568" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.75294125079999996" green="0.015686275440000001" blue="0.070588238540000001" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siM-OB-C82">
                                 <rect key="frame" x="16" y="131" width="568" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -38,6 +27,17 @@
                                     <action selector="requestCode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="m7X-I6-uJd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQz-YF-Bba">
+                                <rect key="frame" x="16" y="187" width="568" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.75294125079999996" green="0.015686275440000001" blue="0.070588238540000001" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+15612600684" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="38R-89-CPp">
+                                <rect key="frame" x="16" y="72" width="568" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
                             <activityIndicatorView hidden="YES" opaque="NO" alpha="0.65000000000000013" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XNV-DR-vUw">
                                 <rect key="frame" x="282" y="282" width="37" height="37"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,16 +46,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="XNV-DR-vUw" secondAttribute="centerY" id="358-7k-d4R"/>
                             <constraint firstItem="38R-89-CPp" firstAttribute="trailing" secondItem="siM-OB-C82" secondAttribute="trailing" id="6S1-dH-QjO"/>
                             <constraint firstItem="38R-89-CPp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="8Zc-Hf-7Mb"/>
-                            <constraint firstAttribute="centerY" secondItem="XNV-DR-vUw" secondAttribute="centerY" id="Bkk-XZ-OyE"/>
                             <constraint firstItem="kQz-YF-Bba" firstAttribute="top" secondItem="siM-OB-C82" secondAttribute="bottom" constant="8" symbolic="YES" id="CcB-Bz-IY8"/>
-                            <constraint firstAttribute="centerY" secondItem="XNV-DR-vUw" secondAttribute="centerY" id="CdY-iE-dtf"/>
-                            <constraint firstAttribute="centerX" secondItem="XNV-DR-vUw" secondAttribute="centerX" id="D1X-1k-uQ4"/>
                             <constraint firstItem="siM-OB-C82" firstAttribute="leading" secondItem="kQz-YF-Bba" secondAttribute="leading" id="DOT-Yk-Yk9"/>
                             <constraint firstItem="38R-89-CPp" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="FKb-9p-m9V"/>
-                            <constraint firstAttribute="centerX" secondItem="XNV-DR-vUw" secondAttribute="centerX" id="H6Z-SH-FbV"/>
                             <constraint firstItem="38R-89-CPp" firstAttribute="leading" secondItem="siM-OB-C82" secondAttribute="leading" id="MHH-pi-0c9"/>
+                            <constraint firstAttribute="centerX" secondItem="XNV-DR-vUw" secondAttribute="centerX" id="S6m-Lb-mAv"/>
                             <constraint firstItem="38R-89-CPp" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="cJH-Q5-3KJ"/>
                             <constraint firstItem="siM-OB-C82" firstAttribute="trailing" secondItem="kQz-YF-Bba" secondAttribute="trailing" id="ej6-Ld-BfK"/>
                             <constraint firstItem="siM-OB-C82" firstAttribute="top" secondItem="38R-89-CPp" secondAttribute="bottom" constant="8" symbolic="YES" id="gBi-KI-2Au"/>
@@ -139,7 +137,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aH1-Go-sDK">
+                            <activityIndicatorView hidden="YES" opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aH1-Go-sDK">
                                 <rect key="frame" x="282" y="281" width="37" height="37"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="color" red="0.38823529410000002" green="0.0078431372550000003" blue="0.61568627450000002" alpha="1" colorSpace="deviceRGB"/>
@@ -151,10 +149,12 @@
                             <constraint firstItem="jU9-XG-2dL" firstAttribute="top" secondItem="ozU-ji-ILG" secondAttribute="bottom" constant="8" symbolic="YES" id="CGl-e4-r2b"/>
                             <constraint firstItem="jU9-XG-2dL" firstAttribute="leading" secondItem="ozU-ji-ILG" secondAttribute="leading" id="DZ4-kT-3Yj"/>
                             <constraint firstItem="jU9-XG-2dL" firstAttribute="trailing" secondItem="ozU-ji-ILG" secondAttribute="trailing" id="Gvq-1r-ySw"/>
+                            <constraint firstAttribute="centerY" secondItem="aH1-Go-sDK" secondAttribute="centerY" id="NWf-0T-skQ"/>
                             <constraint firstItem="PmE-yv-LUF" firstAttribute="top" secondItem="jU9-XG-2dL" secondAttribute="bottom" constant="8" symbolic="YES" id="Sia-6g-ooB"/>
                             <constraint firstItem="hoC-wC-lcP" firstAttribute="leading" secondItem="PmE-yv-LUF" secondAttribute="leading" id="apZ-Hf-3kz"/>
                             <constraint firstItem="jU9-XG-2dL" firstAttribute="leading" secondItem="P41-y6-FAz" secondAttribute="leadingMargin" id="c4Q-T3-jXF"/>
                             <constraint firstItem="PmE-yv-LUF" firstAttribute="trailing" secondItem="jU9-XG-2dL" secondAttribute="trailing" id="cmp-X3-33F"/>
+                            <constraint firstAttribute="centerX" secondItem="aH1-Go-sDK" secondAttribute="centerX" id="kZe-50-9iJ"/>
                             <constraint firstItem="hoC-wC-lcP" firstAttribute="trailing" secondItem="PmE-yv-LUF" secondAttribute="trailing" id="nUA-Ox-Tmc"/>
                             <constraint firstItem="hoC-wC-lcP" firstAttribute="top" secondItem="PmE-yv-LUF" secondAttribute="bottom" constant="8" symbolic="YES" id="s1S-N5-m92"/>
                             <constraint firstItem="jU9-XG-2dL" firstAttribute="trailing" secondItem="P41-y6-FAz" secondAttribute="trailingMargin" id="xJd-9w-opJ"/>
@@ -167,7 +167,7 @@
                     <connections>
                         <outlet property="code" destination="jU9-XG-2dL" id="RJx-fp-PmN"/>
                         <outlet property="spinner" destination="aH1-Go-sDK" id="5da-Hy-gdj"/>
-                        <outlet property="status" destination="hoC-wC-lcP" id="bAd-T0-bw0"/>
+                        <outlet property="status" destination="hoC-wC-lcP" id="ndw-Z9-XTw"/>
                         <segue destination="KRR-4l-xCZ" kind="show" identifier="confirmedSeg" id="gmO-1H-Jr2"/>
                     </connections>
                 </viewController>

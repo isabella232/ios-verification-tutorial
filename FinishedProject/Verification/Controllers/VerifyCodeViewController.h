@@ -10,9 +10,9 @@
 #import <SinchVerification/SinchVerification.h>
 @interface VerifyCodeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *code;
-@property id<SINVerification> verification;
-
 @property (weak, nonatomic) IBOutlet UILabel *status;
+
+@property id<SINVerification> verification;
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 - (IBAction)verifyCode:(id)sender;

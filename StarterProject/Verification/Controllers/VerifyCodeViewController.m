@@ -13,7 +13,7 @@
 @end
 
 @implementation VerifyCodeViewController
-
+@synthesize verification, code, status;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -28,12 +28,12 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [_code becomeFirstResponder];
+    [code becomeFirstResponder];
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    [_code resignFirstResponder];
+    [code resignFirstResponder];
 }
 /*
 #pragma mark - Navigation
@@ -46,8 +46,15 @@
 */
 
 - (IBAction)verifyCode:(id)sender {
-    _spinner.frame = self.view.frame;
+    if ([code.text isEqualToString:@""])
+    {
+        status.text = @"You must enter a code";
+    }
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_spinner attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_spinner attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
     [_spinner startAnimating];
+
+    //replace this below with verification code
     [self performSegueWithIdentifier:@"confirmedSeg" sender:nil];
 
     

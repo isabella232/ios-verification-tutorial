@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SinchVerification/SinchVerification.h>
-@interface EnterPhoneNumberViewController : UIViewController
 
+@interface EnterPhoneNumberViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumber;
 @property (weak, nonatomic) IBOutlet UILabel *status;
