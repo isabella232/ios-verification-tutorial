@@ -6,7 +6,7 @@ I created a start project that contains the framework and a couple of screens yo
 
 1. [Download the SDK](http://sinch.com/download/)
 2. Add the `SinchVerification.Framework` to your app, OR
-3. Use [cocoapods](http://cocoapods.org) - `pod 'SinchVerification'` 
+3. Use [cocoapods](http://cocoapods.org) - `pod 'SinchVerification', '0.9-beta1'` 
 
 ## Verifying a phone number
 First of all we need to collect the users phone number as we do in the starter project "EnterPhonenumberViewController" and request to send an SMS to that number. Open the **EnterPhonenumberViewController.m**, and find the **requestCode** method. Then find the row `[self performSegueWithIdentifier:@"verifyCodeSeg" sender:nil];` and replace it with this code:
