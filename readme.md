@@ -62,3 +62,5 @@ Here we set the verification object to the current verification. Next up is to v
 
 ## Thats it
 With a few lines of code you can implement a solid solution to verify phone numbers of your users in iOS. Next up is implementing the callbacks on your server side. 
+
+![sample SMS verification screens](images/sms-input.jpg)
