@@ -60,5 +60,5 @@ Here we set the verification object to the current verification. Next up is to v
      }];
 ```
 
-## That's it
+## Thats it
 With a few lines of code you can implement a solid solution to verify phone numbers of your users in iOS. Next up is implementing the callbacks on your server side. 
