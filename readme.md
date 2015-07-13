@@ -1,5 +1,5 @@
 # Verify a Phone Number in your iOS App
-In this tutorial, we are going to explore our Verification SDK for iOS. As of writing this, the method we support for iOS is SMS verification and we have written about that in [earlier tutorials](https://www.sinch.com/tutorials/build-two-factor-authentication-system-pt-2/). With our Verification SDK you wont need any backend yourself, or you can implement a simple endpoint to receive that a number is verified. 
+In this tutorial, we are going to explore our Verification SDK for iOS. As of writing this, the method we support for iOS is [SMS verification](https://www.sinch.com/products/verification/sms-verification/) and we have written about that in [earlier tutorials](https://www.sinch.com/tutorials/build-two-factor-authentication-system-pt-2/). With our Verification SDK you wont need any backend yourself, or you can implement a simple endpoint to receive that a number is verified. 
 
 ## Setup
 I created a start project that contains the framework and a couple of screens you can download [here](https://github.com/sinch/ios-verification-tutorial). If you prefer to add it to you app directly here is how you set it up:
