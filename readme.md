@@ -1,15 +1,15 @@
-# Verify a Phone Number in your iOS App
-In this tutorial, we are going to explore our Verification SDK for iOS. As of writing this, the method we support for iOS is [SMS verification](https://www.sinch.com/products/verification/sms-verification/) and we have written about that in [earlier tutorials](https://www.sinch.com/tutorials/build-two-factor-authentication-system-pt-2/). With our Verification SDK you wont need any backend yourself, or you can implement a simple endpoint to receive that a number is verified. 
+# Verify a Phone Number in Your iOS App
+In this tutorial, we are going to explore our Verification SDK for iOS. As of this writing, the method we support for iOS is [SMS verification](https://www.sinch.com/products/verification/sms-verification/), which we wrote about in [earlier tutorials](https://www.sinch.com/tutorials/build-two-factor-authentication-system-pt-2/). With our Verification SDK, you won’t need any backend yourself, or you can implement a simple endpoint to receive that a number is verified. 
 
 ## Setup
-I created a start project that contains the framework and a couple of screens you can download [here](https://github.com/sinch/ios-verification-tutorial). If you prefer to add it to you app directly here is how you set it up:
+I created a start project that contains the framework and a couple of screens you can download [here](https://github.com/sinch/ios-verification-tutorial). If you prefer to add it to your app directly, here is how you set it up:
 
 1. [Download the SDK](http://sinch.com/download/)
 2. Add the `SinchVerification.Framework` to your app, OR
-3. Use [cocoapods](http://cocoapods.org) - `pod 'SinchVerification', '0.9-beta1'` 
+3. Use [CocoaPods](http://cocoapods.org) - `pod 'SinchVerification', '0.9-beta1'` 
 
 ## Verifying a phone number
-First of all we need to collect the users phone number as we do in the starter project "EnterPhonenumberViewController" and request to send an SMS to that number. Open the **EnterPhonenumberViewController.m**, and find the **requestCode** method. Then find the row `[self performSegueWithIdentifier:@"verifyCodeSeg" sender:nil];` and replace it with this code:
+First off, we need to collect the user’s phone number as we do in the starter project "EnterPhonenumberViewController" and request to send an SMS to that number. Open the **EnterPhonenumberViewController.m** and find the **requestCode** method. Then find the row `[self performSegueWithIdentifier:@"verifyCodeSeg" sender:nil];` and replace it with this code:
 
 *EnterPhonenumberViewController.m*
 
@@ -30,7 +30,7 @@ _verification = [SINVerification
 }];
 ```
 
-What we are doing in the above code is to create a verification object, and then start the two step process of verifying a number. If it fails, display an error message, otherwise continue to the **EnterCode** screen. In the starter project, I also prepared the **prepareForSegue:** method to pass the verification object to the EnterCode controller.
+In the code above, we are creating a verification object and starting the two step process of verifying a number. If it fails, display an error message, otherwise continue to the **EnterCode** screen. In the starter project, I also prepared the **prepareForSegue:** method to pass the verification object to the EnterCode controller.
 
 ```
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -39,7 +39,7 @@ What we are doing in the above code is to create a verification object, and then
 }
 ```
 
-Here we set the verification object to the current verification. Next up is to verify the code sent to the phone. Open up **VerifyCodeViewController.m** and find the method **verifyCode:** and make and replace the line `[self performSegueWithIdentifier:@"verifyCodeSeg" sender:nil];` with 
+Here we set the verification object to the current verification. Next up, verify the code sent to the phone. Open up **VerifyCodeViewController.m**, find the method **verifyCode:**, and replace the line `[self performSegueWithIdentifier:@"verifyCodeSeg" sender:nil];` with 
 
 **VerifyCodeViewController.m**
 
@@ -60,7 +60,6 @@ Here we set the verification object to the current verification. Next up is to v
      }];
 ```
 
-## Thats it
-With a few lines of code you can implement a solid solution to verify phone numbers of your users in iOS. Next up is implementing the callbacks on your server side. 
+With a few lines of code, you can implement a solid solution to verify phone numbers of your users in iOS. Next up is implementing the callbacks on your server side. 
 
 ![sample SMS verification screens](images/sms-input.jpg)
