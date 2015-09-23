@@ -1,3 +1,6 @@
+Writer’s note: *For the latest updates on mobile app security, make sure to check out our [Verification SDK] (https://www.sinch.com/products/verification/sms-verification/).*
+
+
 # Verify a Phone Number in Your iOS App
 In this tutorial, we are going to explore our Verification SDK for iOS. As of this writing, the method we support for iOS is [SMS verification](https://www.sinch.com/products/verification/sms-verification/), which we wrote about in [earlier tutorials](https://www.sinch.com/tutorials/build-two-factor-authentication-system-pt-2/). With our Verification SDK, you won’t need any backend yourself, or you can implement a simple endpoint to receive that a number is verified. 
 
